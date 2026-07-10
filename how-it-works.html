@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive Command Center — How It Works</title>
+<style>
+:root {
+  --page: #f5f5f7; --surface: #ffffff;
+  --ink: #1d1d1f; --ink-2: #424245; --muted: #6e6e73;
+  --grid: #e8e8ed; --line: #d2d2d7; --accent: #0071e3;
+  --good-bg: #e6f4e6; --good-ink: #1a7f37;
+  --warn-bg: #fff4d6; --warn-ink: #8a5a00;
+  --crit-bg: #fdecec; --crit-ink: #c0392b;
+  --info-bg: #e8f1fd; --info-ink: #1c5cab;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--page); color: var(--ink); font: 18px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 24px 80px; }
+header.hero { text-align: center; padding: 88px 24px 56px; }
+.hero h1 { font-size: 48px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+.hero p.sub { font-size: 24px; color: var(--ink-2); margin-top: 16px; line-height: 1.4; }
+.hero .cta { display: inline-block; margin-top: 28px; background: var(--accent); color: #fff; text-decoration: none; font-size: 17px; font-weight: 500; padding: 13px 28px; border-radius: 999px; }
+.hero .cta:hover { background: #0062c3; }
+.hero .cta-sub { display: block; margin-top: 12px; color: var(--muted); font-size: 15px; }
+section { margin-top: 56px; }
+h2 { font-size: 30px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 14px; }
+h3 { font-size: 21px; font-weight: 600; margin-bottom: 8px; }
+p { margin-bottom: 14px; color: var(--ink-2); }
+p strong { color: var(--ink); }
+.card { background: var(--surface); border: 1px solid var(--grid); border-radius: 18px; padding: 28px; margin: 22px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.eyebrow { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 6px; }
+.example { background: var(--page); border-radius: 12px; padding: 18px 20px; margin-top: 14px; font-size: 16px; }
+.example .ex-label { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 6px; }
+.badge { display: inline-block; padding: 3px 11px; border-radius: 999px; font-size: 13px; font-weight: 600; white-space: nowrap; }
+.b-good { background: var(--good-bg); color: var(--good-ink); }
+.b-warn { background: var(--warn-bg); color: var(--warn-ink); }
+.b-crit { background: var(--crit-bg); color: var(--crit-ink); }
+.b-info { background: var(--info-bg); color: var(--info-ink); }
+table.mini { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 16px; background: var(--surface); border-radius: 10px; overflow: hidden; }
+table.mini th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); padding: 10px 12px; border-bottom: 1px solid var(--line); }
+table.mini td { padding: 10px 12px; border-bottom: 1px solid var(--grid); }
+table.mini tr.bad td { background: var(--crit-bg); }
+.num { text-align: right; font-variant-numeric: tabular-nums; }
+ul.plain { margin: 0 0 14px 24px; color: var(--ink-2); }
+ul.plain li { margin-bottom: 8px; }
+dl.gloss dt { font-weight: 600; margin-top: 16px; color: var(--ink); }
+dl.gloss dd { color: var(--ink-2); margin-left: 0; }
+footer { text-align: center; color: var(--muted); font-size: 14px; padding: 40px 24px; border-top: 1px solid var(--grid); margin-top: 72px; }
+@media (max-width: 600px) { .hero h1 { font-size: 34px; } .hero p.sub { font-size: 19px; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>One screen that shows you<br>everything about your music business.</h1>
+  <p class="sub">The Executive Command Center watches the catalog, the paperwork, and the numbers — and warns you before anything goes wrong.</p>
+  <a class="cta" href="executive-command-center.html">Try the live demo</a>
+  <span class="cta-sub">Opens in your browser. Sample data — click anything, nothing can break.</span>
+</header>
+
+<div class="wrap">
+
+<section>
+  <h2>The problem it solves</h2>
+  <p>Independent music companies lose money in quiet, boring ways: a song goes out before the contracts are signed, ownership shares that don't add up, a royalty statement nobody double-checked. None of it looks like a crisis on the day it happens — it becomes one months later.</p>
+  <p><strong>This dashboard makes those problems impossible to miss.</strong> It reads everything in the catalog and puts a plain warning at the top of the screen while there's still time to fix it.</p>
+</section>
+
+<section>
+  <h2>The five screens, in plain English</h2>
+
+  <div class="card">
+    <div class="eyebrow">Screen 1</div>
+    <h3>Overview — the car dashboard</h3>
+    <p>Like the dashboard in your car: speed, fuel, and warning lights. You see how many artists and releases you have, how much revenue came in, and — most importantly — a list of warning lights.</p>
+    <div class="example">
+      <div class="ex-label">What a warning looks like</div>
+      <span class="badge b-crit">high</span>&nbsp; "Midnight EP" — Missing ISRC: "Midnight"
+      <p style="margin:10px 0 0; font-size:15px;">Translation: one song is missing its serial number, and without it the release can't be distributed. Click the warning and it takes you straight to the problem.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="eyebrow">Screen 2</div>
+    <h3>Approvals — nothing ships without a signature</h3>
+    <p>Think of signing checks. Every release stops at your desk before it goes out, with a simple checklist: <span class="badge b-good">✓ Metadata</span> <span class="badge b-good">✓ Assets</span> <span class="badge b-crit">✗ Contracts</span> — green means done, red means missing.</p>
+    <p>You can still approve something with an open issue — you're the executive — but the system makes you confirm it a second time, and it writes the decision down. Which brings us to the receipt:</p>
+    <div class="example">
+      <div class="ex-label">The audit log — every decision gets a receipt</div>
+      <em>"A. Reeves (executive): Approved 'First Light — Single' WITH 1 open risk(s)"</em>
+      <p style="margin:10px 0 0; font-size:15px;">Six months later, nobody argues about who approved what. It's written down, with a date and a name.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="eyebrow">Screen 3</div>
+    <h3>Artists &amp; Rights — the deed box</h3>
+    <p>For every song: who owns it, who gets paid, and whether the paperwork is actually on file.</p>
+    <p><strong>Splits are like splitting a restaurant bill.</strong> If four people split a bill, the shares must add up to exactly 100%. If they only add up to 92%, someone is going to be unhappy — and in music, that someone sues. The dashboard adds up every song's shares and turns the row red if they don't hit 100%:</p>
+    <table class="mini">
+      <tr><th>Contributor</th><th>Role</th><th class="num">Share</th><th>Status</th></tr>
+      <tr><td>Rico Vale</td><td>artist</td><td class="num">50%</td><td><span class="badge b-good">approved</span></td></tr>
+      <tr><td>Track Marshal</td><td>producer</td><td class="num">30%</td><td><span class="badge b-good">approved</span></td></tr>
+      <tr><td>Lil Verse</td><td>writer</td><td class="num">12%</td><td><span class="badge b-warn">pending</span></td></tr>
+      <tr class="bad"><td><strong>Total</strong></td><td></td><td class="num"><strong>92%</strong></td><td><span class="badge b-crit">must equal 100%</span></td></tr>
+    </table>
+    <p style="margin-top:14px;"><strong>Owning masters vs. publishing is like owning a house vs. renting.</strong> If the artist owns the recording (the "master") and the songwriting (the "publishing"), they own the house. If a label or a third party owns them, the artist is a tenant in their own song. Every song gets a simple protection grade, A through F — an A means the house, the deed, and the paperwork are all in the artist's name.</p>
+  </div>
+
+  <div class="card">
+    <div class="eyebrow">Screen 4</div>
+    <h3>Numbers Check — the bank statement that has to add up</h3>
+    <p>Reported numbers get checked the way you'd check a bank statement. Two simple tests:</p>
+    <ul class="plain">
+      <li><strong>Is the math possible?</strong> You cannot sell 61,000 copies of a record if you only shipped 50,000. If a report says that, the report is wrong — and the dashboard stamps it <span class="badge b-crit">Impossible math</span>.</li>
+      <li><strong>Are the fans real?</strong> Five million streams sounds wonderful. But if only 360 people actually bought anything, that's applause, not customers. The dashboard shows the honest conversion rate next to the big flashy number.</li>
+    </ul>
+    <div class="example">
+      <div class="ex-label">Example from the demo</div>
+      <p style="margin:0; font-size:16px;">"Fast Money" reports 5,100,000 streams — and 360 purchases. Verified sales: 61,000. Units shipped: 50,000. Verdict: <span class="badge b-crit">Impossible math</span>. Somebody's numbers are cooked, and now you know before you spend against them.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="eyebrow">Screen 5</div>
+    <h3>Trends &amp; Radio — are we actually growing?</h3>
+    <p>A simple line: streams per month, going up or not. A funnel showing how many listeners became savers, and how many savers became buyers. And a radio board showing where songs got played — with every report labeled by where it came from and how it was verified, so nobody passes off a rumor as a chart.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Built-in safeguards</h2>
+  <ul class="plain">
+    <li><strong>Roles.</strong> A manager can see the pipeline but cannot approve a release — the buttons simply aren't there for them. Only executives and admins can sign off. There's a "Viewing as" switcher in the demo so you can see this for yourself.</li>
+    <li><strong>The audit log.</strong> Every approval and rejection is recorded with who, what, and when. Like a receipt drawer that fills itself.</li>
+    <li><strong>Warnings before signatures.</strong> The system never blocks the boss — but it never lets a risk hide, either. Approving past a warning is allowed, visible, and logged.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Where this stands today</h2>
+  <p><strong>What you're looking at is a working prototype.</strong> Everything on screen works — the approvals, the warnings, the math checks — but it runs on realistic sample data, on purpose. The sample catalog is deliberately seeded with problems (a 92% split, a missing serial number, a cooked sales report) so every feature demonstrates itself in the demo.</p>
+  <p><strong>The next step</strong> is connecting it to a real catalog: real uploads, real logins, real royalty data. The screens and the logic you see are exactly what that production version will use.</p>
+</section>
+
+<section>
+  <h2>Small glossary</h2>
+  <div class="card">
+    <dl class="gloss">
+      <dt>ISRC</dt><dd>A song's serial number. Every legitimate recording has one; distributors require it.</dd>
+      <dt>UPC</dt><dd>The barcode for a whole release (a single, EP, or album).</dd>
+      <dt>Splits</dt><dd>Who gets what percentage of a song's money. Must always total exactly 100%.</dd>
+      <dt>Master</dt><dd>Ownership of the actual recording. Whoever owns the master controls the money the recording earns.</dd>
+      <dt>Publishing</dt><dd>Ownership of the songwriting — the words and melody — separate from the recording.</dd>
+      <dt>Split sheet</dt><dd>The signed piece of paper where everyone agrees on the percentages. No sheet, no proof.</dd>
+      <dt>Spin</dt><dd>One play of a song on a radio station or show.</dd>
+    </dl>
+  </div>
+</section>
+
+<section style="text-align:center; margin-top:64px;">
+  <a class="cta" href="executive-command-center.html" style="display:inline-block; background: var(--accent); color:#fff; text-decoration:none; font-size:17px; font-weight:500; padding:13px 28px; border-radius:999px;">Open the dashboard</a>
+  <p style="margin-top:12px; color:var(--muted); font-size:15px;">Sample data only — explore freely. Refreshing the page resets everything.</p>
+</section>
+
+</div>
+
+<footer>Executive Command Center — prototype v1 · Runs entirely in your browser · No account, no install</footer>
+
+</body>
+</html>

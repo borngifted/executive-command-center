@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive Command Center</title>
+<style>
+/*INJECT:CSS*/
+</style>
+</head>
+<body>
+<div id="app">
+  <aside id="sidebar">
+    <div class="brand">Command Center<span>Executive dashboard</span></div>
+    <nav id="nav"></nav>
+    <div class="role-box">
+      <label for="roleSwitch">Viewing as</label>
+      <select id="roleSwitch"></select>
+    </div>
+  </aside>
+  <div id="main">
+    <header id="topbar">
+      <div id="whoami"></div>
+      <input id="search" type="search" placeholder="Search artists, releases, songs…" autocomplete="off">
+      <button id="auditBtn" class="btn" type="button" data-action="audit">Audit Log</button>
+    </header>
+    <main id="view"></main>
+    <footer id="foot">Prototype — mock data only. Refresh resets to seed data.</footer>
+  </div>
+  <aside id="auditDrawer" hidden>
+    <h2>Audit Log</h2>
+    <ul id="auditList"></ul>
+  </aside>
+</div>
+<script>
+"use strict";
+/*INJECT:DATA*/
+/*INJECT:LOGIC*/
+/*INJECT:UI*/
+</script>
+</body>
+</html>
